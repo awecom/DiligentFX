@@ -8,7 +8,7 @@ project(DiligentFX CXX)
 
 file(GLOB_RECURSE SHADERS LIST_DIRECTORIES false Shaders/*.*)
 
-add_library(DiligentFX STATIC README.md ${SHADERS})
+add_library(DiligentFX SHARED README.md ${SHADERS})
 
 file(RELATIVE_PATH DILIGENT_FX_DIR "${CMAKE_SOURCE_DIR}" "${CMAKE_CURRENT_SOURCE_DIR}")
 
