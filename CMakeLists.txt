@@ -35,6 +35,7 @@ if (TARGET Diligent-HLSL2GLSLConverterLib)
 endif()
 
 set_common_target_properties(DiligentFX)
+set_target_properties(DiligentFX PROPERTIES CXX_VISIBILITY_PRESET default)
 
 target_include_directories(DiligentFX
 PUBLIC
