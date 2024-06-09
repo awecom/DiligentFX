@@ -108,6 +108,9 @@ if(DILIGENT_INSTALL_FX)
     install(DIRECTORY   PostProcess/Bloom/interface
             DESTINATION  "${CMAKE_INSTALL_INCLUDEDIR}/${DILIGENT_FX_DIR}/PostProcess/Bloom"
     )
+    install(DIRECTORY   PostProcess/Common/interface
+            DESTINATION  "${CMAKE_INSTALL_INCLUDEDIR}/${DILIGENT_FX_DIR}/PostProcess/Common"
+    )
     install(DIRECTORY    Components/interface
             DESTINATION  "${CMAKE_INSTALL_INCLUDEDIR}/${DILIGENT_FX_DIR}/Components"
     )
