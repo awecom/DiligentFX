@@ -119,8 +119,9 @@ if(DILIGENT_INSTALL_FX)
     )
     install(DIRECTORY    Shaders
             DESTINATION  "."
-            FILES_MATCHING PATTERN "public/*.*"
-            PATTERN "private" EXCLUDE
+            FILES_MATCHING 
+            PATTERN "public/*.*" 
+            PATTERN "private/*.*"
     )
 endif()
 
