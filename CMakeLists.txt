@@ -29,6 +29,8 @@ PUBLIC
     Diligent-Imgui
 )
 
+set_property(TARGET DiligentFX PROPERTY JSON_DIAGNOSTICS 0)
+
 if (TARGET Diligent-HLSL2GLSLConverterLib)
     target_link_libraries(DiligentFX PRIVATE Diligent-HLSL2GLSLConverterLib)
     target_compile_definitions(DiligentFX PRIVATE HLSL2GLSL_CONVERTER_SUPPORTED=1)
@@ -70,7 +72,9 @@ endforeach()
 
 # Convert shaders to headers and generate master header with the list of all files
 set(SHADER_OUTPUT_DIR ${CMAKE_CURRENT_BINARY_DIR}/shaders_inc)
+message("Creating the folder ${SHADER_OUTPUT_DIR}")
 file(MAKE_DIRECTORY ${SHADER_OUTPUT_DIR})
+message("folder ${SHADER_OUTPUT_DIR} created")
 target_include_directories(DiligentFX PRIVATE ${SHADER_OUTPUT_DIR})
 
 set(SHADERS_LIST_FILE ${SHADER_OUTPUT_DIR}/shaders_list.h)
