@@ -121,6 +121,9 @@ if(DILIGENT_INSTALL_FX)
     install(DIRECTORY    PBR/interface
             DESTINATION  "${CMAKE_INSTALL_INCLUDEDIR}/${DILIGENT_FX_DIR}/PBR"
     )
+    install(DIRECTORY    Utilities/interface
+            DESTINATION  "${CMAKE_INSTALL_INCLUDEDIR}/${DILIGENT_FX_DIR}/Utilities"
+    )
     install(DIRECTORY    Shaders
             DESTINATION  "."
             FILES_MATCHING 
