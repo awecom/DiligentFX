@@ -646,10 +646,10 @@ protected:
 
     void GetVSInputStructAndLayout(PSO_FLAGS PSOFlags, std::string& VSInputStruct, InputLayoutDescX& InputLayout) const;
 
-    IPipelineState* GetPSO(PsoHashMapType&             PsoHashMap,
-                           const GraphicsPipelineDesc& GraphicsDesc,
-                           const PSOKey&               Key,
-                           bool                        CreateIfNull);
+    virtual IPipelineState* GetPSO(PsoHashMapType&             PsoHashMap,
+                                   const GraphicsPipelineDesc& GraphicsDesc,
+                                   const PSOKey&               Key,
+                                   bool                        CreateIfNull);
 
     static std::string GetVSOutputStruct(PSO_FLAGS PSOFlags, bool UseVkPointSize, bool UsePrimitiveId);
     static std::string GetPSOutputStruct(PSO_FLAGS PSOFlags);
